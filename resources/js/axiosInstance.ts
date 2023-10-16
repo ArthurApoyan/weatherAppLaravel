@@ -11,7 +11,7 @@ export const AxiosLaravel = axios.create({
 });
 
 export const AxiosWeatherAPI = axios.create({
-    baseURL: "https://api.openweathermap.org/",
+    baseURL: "http://127.0.0.1:8000/proxy",
 });
 
 export const API_KEY:string = "d29a483b3a54e6bd035eb0fecd0209b6";

@@ -135,3 +135,10 @@ export interface Coord {
     lat: number
     lon: number
 }
+
+export type Places = {
+    id?: number,
+    place_name: string,
+    created_at: string,
+    updated_at: string
+}

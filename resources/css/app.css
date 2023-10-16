@@ -1,3 +1,31 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(https://m-cdn.phonearena.com/images/article/147370-wide-two_1200/Google-Weather-app-for-Android-is-getting-a-Material-You-redesign.jpg);
+}
+
+::-webkit-scrollbar {
+    width: 4px;
+    height: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #bdbbbb;
+    border-radius: 5px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #636161;
+    border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}

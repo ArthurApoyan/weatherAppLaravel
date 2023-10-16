@@ -12,6 +12,7 @@ const Header = () => {
     const logOut = async () => {
         await AxiosLaravel.delete("logout", {headers: setHeaders()});
         localStorage.removeItem("token");
+        localStorage.removeItem("usersPlaces");
         // @ts-ignore
         dispatch(checkIsAuth());
         navigate("/login");

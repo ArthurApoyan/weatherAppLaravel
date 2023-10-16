@@ -19,6 +19,8 @@ return new class extends Migration
 
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade')->onUpdate('cascade');
             $table->foreign('place_id')->references('id')->on('places')->onDelete('cascade')->onUpdate('cascade');
+
+            $table->unique(['user_id', 'place_id']);
         });
     }
 

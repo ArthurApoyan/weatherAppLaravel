@@ -3,6 +3,7 @@ import { Outlet } from "react-router-dom";
 import { checkIsAuth } from "../Features/Auth/AuthAPI";
 import {User} from "../Types/types";
 import {useAppDispatch} from "../store/hooks";
+import LoadingSpinner from "../Components/LoadingSpinner/LoadingSpinner";
 
 const PrivateRoute = () => {
     const [response, setResponse] = useState(false);
@@ -22,7 +23,7 @@ const PrivateRoute = () => {
     return (
         <div>
             {
-                response ? <Outlet /> : <h1>Loading...</h1>
+                response ? <Outlet /> : <LoadingSpinner/>
             }
         </div>
     );

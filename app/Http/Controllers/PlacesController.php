@@ -13,11 +13,16 @@ class PlacesController extends Controller
     public function __construct(PlacesRepository $placesRepository){
         $this->placesRepository = $placesRepository;
     }
+
     public function index(){
-        return $this->placesRepository->getAllPlaces();
+        return $this->placesRepository->getPlacesByUserId();
     }
 
-    public function show($placeId){
+    public function store(Request $request){
+        return $this->placesRepository->addNewPlaceToUser($request);
+    }
 
+    public function destroy(Places $place){
+        $this->placesRepository->deletePlace($place);
     }
 }

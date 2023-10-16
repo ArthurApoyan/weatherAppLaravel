@@ -1,17 +1,11 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ProxyController;
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider and all of them will
-| be assigned to the "web" middleware group. Make something great!
-|
-*/
+Route::post('/proxy/coordinates', [ProxyController::class, 'makeRequestForCoordinates']);
+Route::post('/proxy/weather', [ProxyController::class, 'makeRequestForWeather']);
+Route::post('/proxy/searchPlace', [ProxyController::class, 'makeRequestForSearchPlace']);
 
 Route::get('/', function () {
     return view('index');
